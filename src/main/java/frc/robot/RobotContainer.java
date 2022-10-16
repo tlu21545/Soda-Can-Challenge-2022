@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import frc.robot.commands.ArcadeDrive;
+import frc.robot.commands.AutoGroup;
 import frc.robot.commands.DefaultAutoGroup;
 import frc.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -46,7 +47,7 @@ public class RobotContainer {
     m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
 
     // Setup SmartDashboard option
-    m_chooser.setDefaultOption("Default Auto", new DefaultAutoGroup(m_drivetrain));
+    m_chooser.setDefaultOption("Default Auto", new AutoGroup(m_drivetrain));
   }
 
   /**
