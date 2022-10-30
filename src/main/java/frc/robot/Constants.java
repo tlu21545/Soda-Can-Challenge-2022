@@ -17,7 +17,7 @@ public final class Constants {
         public static final double kP_drive = 0.4; // proportional gain constant for driveStraight control loop
         public static final double kPAngular = 0.001;
         public static final boolean kGyroReversed = false;
-
+        public static final double tLagAngular = 0.020;
         public static final double kTurnP = 0.1;
         public static final double kTurnI = 0;
         public static final double kTurnD = 0;

@@ -6,7 +6,6 @@ package frc.robot.commands;
 
 import frc.robot.subsystems.Drivetrain;
 import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
-import edu.wpi.first.wpilibj2.command.WaitCommand;
 
 public class DefaultAutoGroup extends SequentialCommandGroup {
   /**
@@ -17,10 +16,6 @@ public class DefaultAutoGroup extends SequentialCommandGroup {
    */
   public DefaultAutoGroup(Drivetrain drivetrain) {
     addCommands(
-        new DriveDistance(0.5, 30, drivetrain),
-        new TurnDegrees(0.5, 160, drivetrain),
-        new WaitCommand(0.1),
-        new DriveDistance(0.5, 30, drivetrain),
-        new TurnDegrees(0.5, 160, drivetrain));
+        new DriveTurnGyro(0.5, 90, drivetrain));
   }
 }
